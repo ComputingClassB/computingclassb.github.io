@@ -3,7 +3,7 @@
 	<head>
 		<title>Hot Beans</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Verdana'>
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Georgia'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,18 +11,11 @@
 		<link rel="stylesheet" href="./assets/cogswork-util.css">
 		<style>
 			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif}
-			h1 {font-family: "Georgia", serif}
-			
-			img{
-				width: auto;
-			}
+			h1, footer {font-family: "Georgia", serif}
+			hr {color:#000;}
 			
 			#menubar {
 				position: fixed;
-				width: 100%;
-			}
-			#main {
-				padding-top: 3.5%;
 				width: 100%;
 			}
 		</style>
@@ -47,7 +40,7 @@
 	</head>
 	<body class="w3-light-gray">
 		<!-- Page Container -->
-		<div class="w3-content" style="max-width:100%">
+		<div class="w3-content" style="max-width:4096px">
 			<!-- The Menubar -->
 			<div class="w3-container w3-white w3-animate-top" id="menubar">
 				<!--<img class="border" src="./assets/HotBeans.webp" width="106" height="106"></img>-->
@@ -57,32 +50,30 @@
 				<a class="cwu-button w3-right w3-white" href="#about"><span>About</span></a>
 			</div>
 			<!-- The Grid -->
-			<div class="w3-margin-left w3-margin-right" id="main">
+			<div class="w3-margin-left w3-margin-right">
 				<!-- The Main Page -->
-				<div class="w3-container w3-white">
+				<div class="w3-container w3-white w3-padding-32"><hr>
 					<h1>Main Page</h1>
 					<h3>This is the main webpage for Hot Beans' new website!</h3>
 					<h6>looking for employment soon.</h6>
-					<img src="https://cdn.pixabay.com/photo/2016/04/15/04/02/water-1330252__340.jpg"></img>
 				</div>
 				<div class="w3-container w3-white" id="about">
 					<h1 class="w3-padding-32 w3-margin-top"><b>About Us<b></h1>
-					<img src="https://png.pngtree.com/thumb_back/fw800/back_pic/03/87/17/0857d1192214be1.jpg"></img>
+					<p>A website design company.</p>
 				</div>
 				<div class="w3-container w3-white" id="gallery">
 					<h1 class="w3-padding-32 w3-margin-top"><b>Our Gallery</b></h1>
-					<img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2017/03/Cassie-Byrnes-Textile-design.png?auto=format&q=60&fit=max&w=930"></img>
+					<a class="w3-button" href="#"><span>Explore Deeper</span></a>
 				</div>
 				<div class="w3-container w3-white" id="contact">
 					<h1 class="w3-padding-32 w3-margin-top"><b>Contact Us<b></h1>
-					<img src="https://i.ytimg.com/vi/tNkZsRW7h2c/maxresdefault_live.jpg"></img>
 					<p>See you soon!</p>
 				</div>
 			<!-- End Grid -->
 			</div>
 		<!-- End Container -->
 		</div>
-		<footer class="w3-container w3-gray w3-center w3-animate-bottom">
+		<footer class="w3-container w3-gray w3-center w3-animate-bottom" style="max-width:auto">
 			<div class="w3-right w3-margin-top w3-hover-opacity">
 				<a href="#topElement"><i class="fa fa-arrow-up w3-xlarge"></i></a>
 			</div>
@@ -91,6 +82,7 @@
 			<a href="https://github.com/TheOnePath" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
 			<a href="https://www.facebook.com/ethan.smithcoss.3?ref=bookmarks" target="_blank"><i class="fa fa-facebook w3-hover-opacity"></i>
 			<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a> and <a href="./assets/cogswork-util.css" target="_blank">Cogswork Utils</a>, Backend by <a href="https://pages.github.com" target="_blank">Github Pages</a>, Design by Ethan Smith-Coss</p>
+			<p class="w3-right">&copy Cogswork Utility, 2019</p>
 		</footer>
 	</body>
 </html>
