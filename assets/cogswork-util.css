@@ -1,9 +1,0 @@
-.cwu-button{display: inline-block;background-color:#FFF;border-radius: 1px;border: none;color: #000;text-align: center;font-size: 16px;padding: 0.5%!important;width: 7.49999%;transition: all 0.5s;cursor: pointer;margin: 2px;}
-.cwu-button span{cursor: pointer;display: inline-block;position: relative;transition: 0.5s;}
-.cwu-button span:after{content: '\00bb';position: absolute;opacity: 0;top: 0;right: -10.0%;transition: 0.5s;}
-.cwu-button:hover span{padding-right: 20px;}
-.cwu-button:hover span:after{opacity: 1;right: 0;}
-.cwu-scrollbar::-webkit-scrollbar {width: 10px;}.cwu-scrollbar::-webkit-scrollbar-track {background: #e8e8e8;}
-.cwu-scrollbar::-webkit-scrollbar-thumb {background: #aaa;}.cwu-scrollbar::-webkit-scrollbar-thumb:hover {background: #888;}
-.cwu-text-title{font-size:120px!important;}.cwu-text-xxlarge{font-size:64px!important;}.cwu-text-xlarge{font-size:46px!important;}.cwu-text-large{font-size:32px!important;}
-.cwu-text-medium{font-size:26px!important;}.cwu-text-small{font-size:20px!important;}.cwu-text-tiny{font-size:16px!important;}.cwu-text-micro{font-size:12px!important;}
