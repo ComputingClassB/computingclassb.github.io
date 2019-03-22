@@ -12,33 +12,35 @@
 		<style>
 			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif;}
 			h1, footer {font-family: "Georgia", serif;}
-			hr {color:#000;}
-			
+			hr {
+				color:#000;
+			}
 			html, body {
 				height: 100%;
 			}
-			
-			footer {width:100vw;}
-			
+			footer {
+				width:100%;
+			}
 			#menubar {
 				position: fixed;
 				width: 100%;
 				z-index: 2;
 			}
 			.parallax { 
-				 /* The image used */
-				  background-image: url("assets/HotBeans.webp");
+				/* The image used */
+				background-image: url("assets/HotBeans.webp");
+				
+				/* Set a specific height */
+				height: 25vw;
+				position: relative;
 
-				  /* Set a specific height */
-				  height: 25vw; 
-
-				  /* Create the parallax scrolling effect */
-				  background-attachment: fixed;
-				  background-position: center 12.5%;
-				  background-repeat: no-repeat;
-				  background-size: 15%;
-				  width:100%;
-				}
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center 25%;
+				background-repeat: no-repeat;
+				background-size: 15%;
+				width:100%;
+			}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
@@ -88,6 +90,14 @@
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>About Us<b></h1>
 					<div>
 						<p class="cwu-text-medium">A website design company.</p>
+						<div>
+						<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="25%"></img>
+						<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="25%"></img>
+						<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="25%"></img>
+						<p class="cwu-text-micro" style="">Ethan Smith-Coss - Leading Program Director</p>
+						<p class="cwu-text-micro" style="">Ethan Smith-Coss - Leading Program Director</p>
+						<p class="cwu-text-micro" style="">Ethan Smith-Coss - Leading Program Director</p>
+						</div>
 					</div>
 				</div>
 				<div class="w3-container w3-white" id="gallery">
@@ -118,7 +128,6 @@
 			<!-- End Grid -->
 			</div>
 		<!-- End Container -->
-		<div class="parallax"></div>
 		</div>
 		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
