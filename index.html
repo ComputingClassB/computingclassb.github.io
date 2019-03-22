@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="cwu-scrollbar" id="topElement">
+<html lang="en-US" class="cwu-scrollbar" id="top">
 	<head>
 		<title>Hot Beans</title>
 		<meta charset="UTF-8">
@@ -8,16 +8,34 @@
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Georgia'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./assets/w3.css">
-		<link rel="stylesheet" href="./assets/cogswork-util.css">
+		<link rel="stylesheet" href="./assets/cogswork.css">
 		<style>
-			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif}
-			h1, footer {font-family: "Georgia", serif}
+			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif;}
+			h1, footer {font-family: "Georgia", serif;}
 			hr {color:#000;}
+			
+			html, body {
+				height: 100%;
+			}
 			
 			#menubar {
 				position: fixed;
 				width: 100%;
+				z-index: 2;
 			}
+			.parallax { 
+				 /* The image used */
+				  background-image: url("assets/HotBeans.webp");
+
+				  /* Set a specific height */
+				  height: 38%; 
+
+				  /* Create the parallax scrolling effect */
+				  background-attachment: fixed;
+				  background-position: 50% 12.5%;
+				  background-repeat: no-repeat;
+				  background-size: 12.49999%;
+				}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
@@ -38,50 +56,76 @@
 			});
 		</script>
 	</head>
-	<body class="w3-light-gray">
-		<!-- Page Container -->
-		<div class="w3-content" style="max-width:1600px">
-			<!-- The Menubar -->
-			<div class="w3-container w3-white w3-animate-top" id="menubar">
-				<!--<img class="border" src="./assets/HotBeans.webp" width="106" height="106"></img>-->
-				<h5 class="w3-left"><b>Hot Beans</b></h5>
-				<a class="cwu-button w3-right w3-white" href="#contact"><span>Contact</span></a>
-				<a class="cwu-button w3-right w3-white" href="#gallery"><span>Gallery</span></a>
-				<a class="cwu-button w3-right w3-white" href="#about"><span>About</span></a>
+	<body>
+		<!-- The Menubar -->
+		<div class="w3-container w3-white" id="menubar">
+			<!--<img class="border" src="./assets/HotBeans.webp" width="106" height="106"></img>-->
+			<h5 class="w3-left"><b>Hot Beans</b></h5>
+			<div>
+				<a class="cwu-button w3-right" href="#contact"><span>Contact</span></a>
+				<a class="cwu-button w3-right" href="#gallery"><span>Gallery</span></a>
+				<a class="cwu-button w3-right" href="#apply"><span>Apply</span></a>
+				<a class="cwu-button w3-right" href="#about"><span>About</span></a>
 			</div>
+		</div>
+		<!-- Make Logo Parallax Against Page Container -->
+		<div class="parallax"></div>
+		<!-- Page Container -->
+		<div style="max-width:4096px">
 			<!-- The Grid -->
-			<div class="w3-center">
+			<div class="w3-center cwu-animate-up">
 				<!-- The Main Page -->
-				<div class="w3-container w3-white w3-padding-32"><hr>
-					<h1 class="cwu-text-title">Main Page</h1>
+				<div class="w3-container w3-white">
+					<!-- <hr class="cwu-hr w3-black"> -->
+					<h1 class="cwu-text-title">Hot Beans</h1>
 					<p class="cwu-text-medium">This is the main webpage for Hot Beans' new website!</p>
 					<p class="cwu-text-small">looking for employment soon.</p>
 				</div>
 				<div class="w3-container w3-white" id="about">
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>About Us<b></h1>
-					<p class="cwu-text-medium">A website design company.</p>
+					<div>
+						<p class="cwu-text-medium">A website design company.</p>
+					</div>
 				</div>
 				<div class="w3-container w3-white" id="gallery">
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Our Gallery</b></h1>
 					<a class="cwu-button" style="width:24.99999%" href="#"><span class="cwu-text-small">Explore Deeper</span></a>
 				</div>
+				<div class="w3-container w3-white" id="apply">
+					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Apply To Our Business</b></h1>
+					<div>
+						<p class="cwu-text-medium">We are looking for new website designers to join our small team and make</p>
+						<p class="cwu-text-medium">our customers satisified with what we deliver to them</p>
+						<hr class="cwu-quarter cwu-hr">
+						<p class="cwu-text-small">Download the form below to apply today.</p>
+						<div>
+							<!-- Downloadable Doc Here -->
+							<a href="./assets/register-form.docx" download><img src="./assets/word-logo.png" alt="Registration Form"></img></a>
+						</div>
+					</div>
+				</div>
 				<div class="w3-container w3-white" id="contact">
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Contact Us<b></h1>
-					<p>See you soon!</p>
+					<div>
+						<p class="cwu-text-small">Ways of contacting us if you require some personal assistance.</p>
+						<br><br>
+						<p class="cwu-text-medium">See you soon!</p>
+					</div>
 				</div>
 			<!-- End Grid -->
 			</div>
 		<!-- End Container -->
+		<div class="parallax"></div>
 		</div>
 		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
-				<a href="#topElement"><i class="fa fa-arrow-up cwu-text-large"></i></a>
+				<a href="#top"><i class="fa fa-arrow-up cwu-text-large"></i></a>
 			</div>
 			<p>Find Us On Social Media.</p>
 			<i class="fa fa-twitter w3-hover-opacity"></i>
 			<a href="https://github.com/TheOnePath" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-			<a href="https://www.facebook.com/ethan.smithcoss.3?ref=bookmarks" target="_blank"><i class="fa fa-facebook w3-hover-opacity"></i>
-			<p class="cwu-text-tiny">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a> and <a href="./assets/cogswork-util.css" target="_blank">Cogswork Utils</a>, Backend by <a href="https://pages.github.com" target="_blank">Github Pages</a>, Design by Ethan Smith-Coss</p>
+			<a href="https://www.facebook.com/ethan.smithcoss.3?ref=bookmarks" target="_blank"><i class="fa fa-facebook w3-hover-opacity"></i></a>
+			<p class="cwu-text-tiny">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a> and <a href="./assets/cogswork.css" target="_blank">Cogswork.CSS</a>, Backend by <a href="https://pages.github.com" target="_blank">Github Pages</a>, Design by Ethan Smith-Coss</p>
 			<p class="cwu-text-micro">&copy Cogswork Utility, 2019</p>
 		</footer>
 	</body>
