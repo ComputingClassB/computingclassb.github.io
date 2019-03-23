@@ -17,14 +17,10 @@
 			}
 			html, body {
 				height: 100%;
+				width: 100%;
 			}
 			footer {
 				width:100%;
-			}
-			#menubar {
-				position: fixed;
-				width: 100%;
-				z-index: 2;
 			}
 			.parallax { 
 				/* The image used */
@@ -63,22 +59,23 @@
 	</head>
 	<body>
 		<!-- The Menubar -->
-		<div class="w3-container w3-white" id="menubar">
-			<!--<img class="border" src="./assets/HotBeans.webp" width="106" height="106"></img>-->
-			<p class="w3-left cwu-text-tiny"><b>Hot Beans</b></p>
-			<div>
-				<a class="cwu-button w3-right" href="#contact"><span>Contact</span></a>
-				<a class="cwu-button w3-right" href="#gallery"><span>Gallery</span></a>
-				<a class="cwu-button w3-right" href="#apply"><span>Apply</span></a>
-				<a class="cwu-button w3-right" href="#about"><span>About</span></a>
+		<div class="w3-top">
+			<div class="w3-bar w3-white" id="menubar">
+				<p class="cwu-text-tiny w3-margin-left" style="float:left;"><b>Hot Beans</b></p>
+				<div class="w3-right">
+					<a class="cwu-button cwu-bar-item" href="#contact"><span>Contact</span></a>
+					<a class="cwu-button cwu-bar-item" href="#gallery"><span>Gallery</span></a>
+					<a class="cwu-button cwu-bar-item" href="#apply"><span>Apply</span></a>
+					<a class="cwu-button cwu-bar-item" href="#about"><span>About</span></a>
+				</div>
 			</div>
 		</div>
 		<!-- Make Logo Parallax Against Page Container -->
 		<div class="parallax"></div>
 		<!-- Page Container -->
-		<div style="max-width:1920px">
+		<div class="w3-center" style="max-width:1920px">
 			<!-- The Grid -->
-			<div class="w3-center cwu-animate-up">
+			<div class="cwu-animate-up">
 				<!-- The Main Page -->
 				<div class="w3-container w3-white">
 					<!-- <hr class="cwu-hr w3-black"> -->
@@ -89,14 +86,31 @@
 				<div class="w3-container w3-white" id="about">
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>About Us<b></h1>
 					<div>
-						<p class="cwu-text-medium">A website design company.</p>
-						<div>
-						<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="25%"></img>
-						<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="25%"></img>
-						<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="25%"></img>
-						<p class="cwu-text-micro" style="">Ethan Smith-Coss - Leading Program Director</p>
-						<p class="cwu-text-micro" style="">Ethan Smith-Coss - Leading Program Director</p>
-						<p class="cwu-text-micro" style="">Ethan Smith-Coss - Leading Program Director</p>
+						<div style="padding-right:2vw;padding-left:2vw;">
+							<h2 class="cwu-text-small"><b>Hot Beans</b> is a website design company that aspire to tailor a website to your unique taste based
+							in Warwick, Warwickshire. Founded in 2019, we are a small team of 3 members currently developing front-end
+							websites for our clients, from portfolios for those who are self-employed to large companies looking for a revamp in their
+							site.</h2>
+						</div>
+						<div class="w3-row-padding w3-margin-top">
+							<div class="cwu-col l3 m6 w3-margin-bottom">
+								<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="100%"></img>
+								<h5 class="cwu-text-small">Ethan Smith-Coss</h5>
+								<p>Leading Programming Director</p>
+								<p><button class="cwu-button" href="#"><span>Contact</span></button></p>
+							</div>
+							<div class="cwu-col l3 m6 w3-margin-bottom">
+								<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="100%"></img>
+								<h5 class="cwu-text-small">Marcus Ranson</h5>
+								<p>Leading Art & Design Director</p>
+								<p><button class="cwu-button" href="#"><span>Contact</span></button></p>
+							</div>
+							<div class="cwu-col l3 m6 w3-margin-bottom">
+								<img src="./assets/ethan-dev.png" style="border: 2px solid black" width="100%"></img>
+								<h5 class="cwu-text-small">Travis King</h5>
+								<p>Website Development CE</p>
+								<p><button class="cwu-button" href="#"><span>Contact</span></button></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -121,8 +135,20 @@
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Contact Us<b></h1>
 					<div>
 						<p class="cwu-text-small">Ways of contacting us if you require some personal assistance.</p>
-						<br><br>
-						<p class="cwu-text-medium">See you soon!</p>
+						<div class="w3-row-padding w3-margin-top">
+							<div class="cwu-col l3 m6 margin-bottom" style="width:auto;">
+								<h2 class="cwu-text-tiny">Email</h2>
+								<p>design@hotbeans.com</p>
+							<div>
+							<div class="cwu-col l3 m6 margin-bottom" style="width:auto;">
+								<h2 class="cwu-text-tiny">Call Us</h2>
+								<p>01926 123456</p>
+							</div>
+							<div class="cwu-col l3 m6 margin-bottom" style="width:auto;">
+								<h2 class="cwu-text-tiny">Post</h2>
+								<p>CV32 1AB</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			<!-- End Grid -->
