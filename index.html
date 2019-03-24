@@ -15,27 +15,16 @@
 			hr {
 				color:#000;
 			}
-			html, body {
-				height: 100%;
-				width: 100%;
-			}
-			footer {
+			html, body, footer {
 				width:100%;
 			}
 			.parallax { 
-				/* The image used */
-				background-image: url("assets/HotBeans.webp");
-				
-				/* Set a specific height */
-				height: 25vw;
-				position: relative;
-
-				/* Create the parallax scrolling effect */
+				background-image: url("./assets/HotBeans.webp");
+				height: 22.5vw;
 				background-attachment: fixed;
 				background-position: center 25%;
 				background-repeat: no-repeat;
-				background-size: 15%;
-				width:100%;
+				background-size: 15vw;
 			}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -57,16 +46,16 @@
 			});
 		</script>
 		<script>
-			var height = document.getElementById('menubar').offsetHeight;
-			document.getElementById('logo').style.margin-top = height;
+			/*var height = document.getElementById("foo").offsetHeight;
+			document.getElementById("logo").innerHTML = height;*/
 		</script>
 	</head>
 	<body>
 		<!-- The Menubar -->
-		<div class="w3-top" id="menubar">
+		<div class="w3-top">
 			<div class="w3-bar w3-white" id="menubar">
 				<p class="cwu-text-tiny w3-margin-left" style="float:left;"><b>Hot Beans</b></p>
-				<div class="w3-right w3-margin-right">
+				<div class="w3-right w3-margin-right" id="foo">
 					<a class="cwu-button cwu-bar-item" href="#about"><span>About</span></a>
 					<a class="cwu-button cwu-bar-item" href="#apply"><span>Apply</span></a>
 					<a class="cwu-button cwu-bar-item" href="#gallery"><span>Gallery</span></a>
@@ -75,20 +64,21 @@
 			</div>
 		</div>
 		<!-- Make Logo Parallax Against Page Container -->
-		<div class="parallax" id="logo"></div>
+		<div class="parallax w3-content"></div>
 		<!-- Page Container -->
-		<div class="w3-center" style="max-width:1920px">
+		<div class="w3-center w3-container w3-content" style="max-width:1920px">
 			<!-- The Grid -->
 			<div class="cwu-animate-up">
 				<!-- The Main Page -->
 				<div class="w3-container w3-white">
 					<!-- <hr class="cwu-hr w3-black"> -->
 					<h1 class="cwu-text-title">Hot Beans</h1>
+					<p class="cwu-text-medium" id="logo"></p>
 					<p class="cwu-text-medium">This is the main webpage for Hot Beans' new website!</p>
 					<p class="cwu-text-small">looking for employment soon.</p>
 				</div>
 				<div class="w3-container w3-white" id="about">
-					<h1 class="w3-padding-16 w3-margin-top cwu-text-xxlarge"><b>About Us<b></h1>
+					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>About Us<b></h1>
 					<div>
 						<div style="padding-right:2vw;padding-left:2vw;">
 							<h2 class="cwu-text-small"><b>Hot Beans</b> is a website design company that aspire to tailor a website to your unique taste based
