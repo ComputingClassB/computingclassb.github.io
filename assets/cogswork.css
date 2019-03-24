@@ -14,3 +14,4 @@
 .cwu-animate-down{position:relative;animation:animatetop 0.8s}@keyframes animatetop{from{top:-10vw;opacity:0} to{top:0;opacity:1};}
 .cwu-col{display:inline-block;width:100vw;}.cwu-col.m6{width:49.99999vw;}.cwu-col.l3{width:24.99999vw;}
 .cwu-bar-item{padding:1vw 1vw;float:left;width:auto;border:none;display:inline-block;}
+.cwu-w{width:100%;}
