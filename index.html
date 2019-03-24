@@ -26,7 +26,7 @@
 				id:"bar";
 				background-image: url("./assets/HotBeans.webp");
 				background-attachment: fixed;
-				background-position: center 76px;
+				background-position: center 12.5%;
 				background-repeat: no-repeat;
 				background-size: 15vw;
 				background-color: red;
@@ -50,8 +50,13 @@
 			  });
 			});
 		</script>
+		<script>
+			function refreshPage() {
+				$("#parallax").load(window.location.href + "#parallax");
+			}
+		</script>
 	</head>
-	<body>
+	<body onresize="refreshPage()">
 		<!-- The Menubar -->
 		<div class="w3-top" id="foo">
 			<div class="w3-bar w3-white" id="menubar">
@@ -162,8 +167,11 @@
 		</div>
 		<script>
 			var div_height = document.getElementById("foo").offsetHeight;
-			var arith = (157 / ($(window).outerWidth() * 0.15)) * 100 + 189;
-			document.getElementById("parallax").style.height = arith.toString().concat("px");
+			document.getElementById("parallax").style.backgroundPosition = "center ".concat(div_height).toString().concat("px");
+			var img_height = ($(window).outerHeight() * 0.15);
+			var arith = (img_height / $(window).outerHeight()) * 100 + 5; //((157 / ($(window).outerWidth() * 0.15)) * 100 + 189)/10;
+			document.getElementById("parallax").style.height = arith.toString().concat("vw");
+			document.getElementById("logo").innerHTML = arith
 		</script>
 		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
