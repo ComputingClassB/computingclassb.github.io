@@ -17,14 +17,16 @@
 			}
 			html, body, footer {
 				width:100%;
+				height:100%;
 			}
-			.parallax { 
+			.parallax {
+				id:"bar";
 				background-image: url("./assets/HotBeans.webp");
-				height: 22.5vw;
 				background-attachment: fixed;
-				background-position: center 25%;
+				background-position: center 76px;
 				background-repeat: no-repeat;
 				background-size: 15vw;
+				background-color: red;
 			}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -45,17 +47,13 @@
 			  });
 			});
 		</script>
-		<script>
-			/*var height = document.getElementById("foo").offsetHeight;
-			document.getElementById("logo").innerHTML = height;*/
-		</script>
 	</head>
 	<body>
 		<!-- The Menubar -->
-		<div class="w3-top">
+		<div class="w3-top" id="foo">
 			<div class="w3-bar w3-white" id="menubar">
 				<p class="cwu-text-tiny w3-margin-left" style="float:left;"><b>Hot Beans</b></p>
-				<div class="w3-right w3-margin-right" id="foo">
+				<div class="w3-right w3-margin-right">
 					<a class="cwu-button cwu-bar-item" href="#about"><span>About</span></a>
 					<a class="cwu-button cwu-bar-item" href="#apply"><span>Apply</span></a>
 					<a class="cwu-button cwu-bar-item" href="#gallery"><span>Gallery</span></a>
@@ -64,7 +62,7 @@
 			</div>
 		</div>
 		<!-- Make Logo Parallax Against Page Container -->
-		<div class="parallax w3-content"></div>
+		<div class="parallax w3-content" id="parallax"></div>
 		<!-- Page Container -->
 		<div class="w3-center w3-container w3-content" style="max-width:1920px">
 			<!-- The Grid -->
@@ -147,7 +145,7 @@
 							</div>
 							<div class="cwu-col l3 m6" style="text-align:left;">
 								<h2 class="cwu-text-medium"><i class="fa fa-envelope-o w3-margin-right w3-text-black"></i>Post</h2>
-								<p class="cwu-text-tiny">115 Coventry Rd, Guys Cliff</p>
+								<p class="cwu-text-tiny">115 Coventry Rd, Guys Cliffe</p>
 								<p class="cwu-text-tiny">Warwick</p>
 								<p class="cwu-text-tiny">Warwickshire</p>
 								<p class="cwu-text-tiny">CV34 5AB</p>
@@ -159,6 +157,11 @@
 			</div>
 		<!-- End Container -->
 		</div>
+		<script>
+			var div_height = document.getElementById("foo").offsetHeight;
+			var arith = (157 / ($(window).outerWidth() * 0.15)) * 100 + 189;
+			document.getElementById("parallax").style.height = arith.toString().concat("px");
+		</script>
 		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
 				<a href="#top"><i class="fa fa-arrow-up cwu-text-large"></i></a>
