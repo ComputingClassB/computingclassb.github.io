@@ -12,7 +12,5 @@
 .cwu-hr{margin:auto;border:0.5px solid!important;}
 .cwu-animate-up{position:relative;animation:animatebottom 1.2s}@keyframes animatebottom{from{bottom:-30vw;opacity:0} to{bottom:0;opacity:1};}
 .cwu-animate-down{position:relative;animation:animatetop 0.8s}@keyframes animatetop{from{top:-10vw;opacity:0} to{top:0;opacity:1};}
-.cwu-inline-right{display:inline-block;}
-.cwu-parallax{min-height:100%;background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover;}
-.cwu-col{display:inline-block;width:100%;}.cwu-col.m6{width:49.99999vw;}.cwu-col.l3{width:24.99999vw;}
+.cwu-col{display:inline-block;width:100vw;}.cwu-col.m6{width:49.99999vw;}.cwu-col.l3{width:24.99999vw;}
 .cwu-bar-item{padding:1vw 1vw;float:left;width:auto;border:none;display:inline-block;}
