@@ -54,10 +54,12 @@
 				//$("#main").load(window.location.href + "#main");
 				//location.reload();
 				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function(){ 
+				/*xhttp.onreadystatechange = function(){ 
 					$("#parallax").load(window.location.href + "#parallax");
-				};
+				};*/
+				xhttp.open("GET","index.html", true);
 				xhttp.send();
+				
 			}
 		</script>
 	</head>
