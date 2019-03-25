@@ -52,20 +52,20 @@
 			function refreshPage() {
 				//$("#parallax").load(window.location.href + "#parallax");
 				//$("#main").load(window.location.href + "#main");
-				//location.reload();
-				var xhttp = new XMLHttpRequest();
+				location.reload();
+				/*var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
-					  document.getElementById("demo").innerHTML = this.responseText;
+					  $("#parallax").load(window.location.href + "#parallax");
 					}
 				};
-				xhttp.open("GET","index.html", true);
-				xhttp.send();
+				//xhttp.open("GET","index.html", true);
+				//xhttp.send();*/
 				
 			}
 		</script>
 	</head>
-	<body onresize="refreshPage()">
+	<body>
 		<!-- The Menubar -->
 		<div class="w3-top" id="bar">
 			<div class="w3-bar w3-white" id="menubar">
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 		<!-- Make Logo Parallax Against Page Container -->
-		<div class="parallax" id="parallax"></div>
+		<div class="parallax" id="parallax" onresize="refreshPage()"></div>
 		<!-- Page Container -->
 		<div class="w3-center w3-content" id="main" style="max-width:4096px;">
 			<!-- The Grid -->
