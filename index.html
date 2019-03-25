@@ -48,14 +48,7 @@
 			  });
 			});
 		</script>
-		<script>
-			function refreshPage() {
-				window.alert();
-				window.location.reload(false);
-				//$("#parallax").load(window.location.href + "#parallax");
-				//$("#main").load(window.location.href + "#main");
-			}
-		</script>
+		<script>window.addEventListener("resize", function() {window.location.reload(false);});</script>
 	</head>
 	<body>
 		<!-- The Menubar -->
@@ -169,7 +162,6 @@
 			</div>
 		<!-- End Container -->
 		</div>
-		<script>document.getElementsByTagName("DIV")[1].onresize = function() {refreshPage()};</script>
 		<script>
 			//window.addEventListener("resize", refreshPage);
 			var div_height = document.getElementById("bar").offsetHeight;
@@ -179,7 +171,7 @@
 			document.getElementById("parallax").style.backgroundPosition = "center ".concat(div_height).toString().concat("px");
 			document.getElementById("parallax").style.height = arith.toString().concat("vw");
 			
-			document.getElementsByClassName("parallax")[0].onresize = function() {refreshPage()};
+			//document.getElementsByClassName("parallax")[0].onresize = function() {refreshPage()};
 		</script>
 		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
