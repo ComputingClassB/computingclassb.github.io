@@ -50,9 +50,9 @@
 		</script>
 		<script>
 			function refreshPage() {
-				//$("#parallax").load(window.location.href + "#parallax");
+				$("#parallax").load(window.location.href + "#parallax");
 				//$("#main").load(window.location.href + "#main");
-				location.reload();
+				//location.reload();
 			}
 		</script>
 	</head>
@@ -175,7 +175,6 @@
 			
 			document.getElementById("parallax").style.backgroundPosition = "center ".concat(div_height).toString().concat("px");
 			document.getElementById("parallax").style.height = arith.toString().concat("vw");
-			$("#parallax").load(window.location.href + "#parallax");
 		</script>
 		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
