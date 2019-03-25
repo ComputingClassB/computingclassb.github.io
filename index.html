@@ -55,11 +55,8 @@
 				//location.reload();
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function(){ 
-					if (this.readyState == 4 && this.status == 200) {
-						$("#parallax").load(window.location.href + "#parallax");
-					}
+					$("#parallax").load(window.location.href + "#parallax");
 				};
-				xhttp.open("GET","ajax_info.txt", true);
 				xhttp.send();
 			}
 		</script>
