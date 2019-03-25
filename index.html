@@ -48,7 +48,7 @@
 			  });
 			});
 		</script>
-		<script>window.addEventListener("resize", function() {window.location.reload(false);});</script>
+		<script>window.addEventListener("resize", function() { if ($(this).width != width){  window.location.reload(false); }});</script>
 	</head>
 	<body>
 		<!-- The Menubar -->
@@ -163,7 +163,7 @@
 		<!-- End Container -->
 		</div>
 		<script>
-			//window.addEventListener("resize", refreshPage);
+			var width = $(window).width();
 			var div_height = document.getElementById("bar").offsetHeight;
 			var img_height = ($(window).outerHeight() * 0.15);
 			var arith = (img_height / $(window).outerHeight()) * 100 + 5; //((157 / ($(window).outerWidth() * 0.15)) * 100 + 189)/10;
