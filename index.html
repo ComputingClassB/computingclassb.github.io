@@ -49,12 +49,9 @@
 			});
 		</script>
 		<script>
-			//window.addEventListener("resize", function() { if ($(this).width != width){  window.location.reload(false); }});
 			var width = $(window).width();
 			$(window).on("resize", function(){
 				if($(this).width() != width){
-					//width = $(this).width();
-					//console.log(width);
 					window.location.reload();
 				}
 			});
@@ -64,7 +61,7 @@
 		<!-- The Menubar -->
 		<div class="w3-top" id="bar">
 			<div class="w3-bar w3-white" id="menubar">
-				<p class="cwu-text-tiny w3-margin-left" style="float:left;"><b>Hot Beans</b></p>
+				<a href="#"><p class="cwu-text-tiny w3-margin-left" style="float:left;"><b>Hot Beans</b></p></a>
 				<div class="w3-right w3-margin-right">
 					<a class="cwu-button cwu-bar-item" href="#about"><span>About</span></a>
 					<a class="cwu-button cwu-bar-item" href="#apply"><span>Apply</span></a>
@@ -102,19 +99,19 @@
 								<img src="./assets/ethan-dev.png" alt="Ethan" style="border: 2px solid black;" width="100%"></img>
 								<h3 class="cwu-text-medium">Ethan Smith-Coss</h3>
 								<p class="cwu-text-tiny">Leading Programming Director</p>
-								<p><button class="cwu-button" href="#"><span>Contact</span></button></p>
+								<a href="mailto:ethan.smith-coss@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
 							</div>
 							<div class="cwu-col l3 m6 w3-margin-bottom">
-								<img src="./assets/ethan-dev.png" alt="Marcus" style="border: 2px solid black;" width="100%"></img>
+								<img src="./assets/marcus-des.png" alt="Marcus" style="border: 2px solid black;" width="100%"></img>
 								<h3 class="cwu-text-medium">Marcus Ranson</h3>
 								<p class="cwu-text-tiny">Leading Art & Design Director</p>
-								<p><button class="cwu-button" href="#"><span>Contact</span></button></p>
+								<a href="mailto:marcus.ranson@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
 							</div>
 							<div class="cwu-col l3 m6 w3-margin-bottom">
 								<img src="./assets/ethan-dev.png" alt="Travis" style="border: 2px solid black;" width="100%"></img>
 								<h3 class="cwu-text-medium">Travis King</h3>
 								<p class="cwu-text-tiny">Website Development CE</p>
-								<p><button class="cwu-button" href="#"><span>Contact</span></button></p>
+								<a href="mailto:travis.king@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></p>
 							</div>
 						</div>
 					</div>
@@ -143,7 +140,7 @@
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge" style="text-align:top;"><b>Contact Us<b></h1>
 					<div>
 						<div>
-							<p class="cwu-text-medium">Ways of contacting us if you require some personal assistance or have any enquires.</p>
+							<p class="cwu-text-medium">Ways of contacting us if you require some personal assistance or have any enquiries.</p>
 						</div>
 						<div class="w3-row-padding w3-padding-32">
 							<div class="cwu-col l3 m6">
@@ -173,15 +170,12 @@
 		<!-- End Container -->
 		</div>
 		<script>
-			//var width = $(window).width();
 			var div_height = document.getElementById("bar").offsetHeight;
 			var img_height = ($(window).outerHeight() * 0.15);
-			var arith = (img_height / $(window).outerHeight()) * 100 + 5; //((157 / ($(window).outerWidth() * 0.15)) * 100 + 189)/10;
+			var arith = (img_height / $(window).outerHeight()) * 100 + 5;
 			
 			document.getElementById("parallax").style.backgroundPosition = "center ".concat(div_height).toString().concat("px");
 			document.getElementById("parallax").style.height = arith.toString().concat("vw");
-			
-			//document.getElementsByClassName("parallax")[0].onresize = function() {refreshPage()};
 		</script>
 		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
