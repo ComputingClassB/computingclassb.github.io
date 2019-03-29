@@ -7,8 +7,8 @@
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Verdana'>
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Georgia'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="./assets/w3.css">
-		<link rel="stylesheet" href="./assets/cogswork.css">
+		<link rel="stylesheet" href="./assets/styles/w3.css">
+		<link rel="stylesheet" href="./assets/styles/cogswork.css">
 		<style>
 			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif;}
 			h1, footer {font-family: "Georgia", serif;}
@@ -23,7 +23,7 @@
 				width:100%;
 			}
 			.parallax {
-				background-image: url("./assets/HotBeans.webp");
+				background-image: url("./assets/images/HotBeans.webp");
 				background-attachment: fixed;
 				background-position: center;
 				background-repeat: no-repeat;
@@ -49,6 +49,21 @@
 			});
 		</script>
 		<script>
+			function aboutUs(file){
+				var rawFile = new XMLHttpRequest();
+				rawFile.open("GET", file, false);
+				rawFile.onreadystatechange = function (){
+					if(rawFile.readyState === 4){
+						if(rawFile.status === 200 || rawFile.status == 0){
+							document.getElementById('aboutUs').innerHTML(rawFile.responseText);
+							alert("Working!");
+						}
+					}
+				}
+				rawFile.send(null);
+			}
+		</script>
+		<script>
 			var width = $(window).width();
 			$(window).on("resize", function(){
 				if($(this).width() != width){
@@ -57,7 +72,7 @@
 			});
 		</script>
 	</head>
-	<body>
+	<body onload="aboutUs('file:///C:/Users/Ethan/Documents/GitHub/computingclassb.github.io/assets/text/about-us.txt')">
 		<!-- The Menubar -->
 		<div class="w3-top" id="bar">
 			<div class="w3-bar w3-white" id="menubar">
@@ -80,7 +95,6 @@
 				<div class="w3-container w3-white">
 					<!-- <hr class="cwu-hr w3-black"> -->
 					<h1 class="cwu-text-title">Hot Beans</h1>
-					<p class="cwu-text-medium"></p>
 					<p class="cwu-text-medium">This is the main webpage for Hot Beans' new website!</p>
 					<p class="cwu-text-small">looking for employment soon.</p>
 				</div>
@@ -93,22 +107,23 @@
 							in Warwick, Warwickshire. Founded in 2019, we are a small team of 3 members currently developing front-end
 							websites for our clients, from portfolios for those who are self-employed to large companies looking for a revamp in their
 							site.</h2>
+							<p class="cwu-text-small" id="aboutUs"><p>
 						</div>
 						<div class="w3-row-padding w3-padding-32">
 							<div class="cwu-col l3 m6 w3-margin-bottom">
-								<img src="./assets/ethan-dev.png" alt="Ethan" style="border: 2px solid black;" width="100%"></img>
+								<img src="./assets/images/ethan-dev.png" alt="Ethan" style="border: 2px solid black;" width="100%"></img>
 								<h3 class="cwu-text-medium">Ethan Smith-Coss</h3>
 								<p class="cwu-text-tiny">Leading Programming Director</p>
 								<a href="mailto:ethan.smith-coss@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
 							</div>
 							<div class="cwu-col l3 m6 w3-margin-bottom">
-								<img src="./assets/marcus-des.png" alt="Marcus" style="border: 2px solid black;" width="100%"></img>
+								<img src="./assets/images/marcus-des.png" alt="Marcus" style="border: 2px solid black;" width="100%"></img>
 								<h3 class="cwu-text-medium">Marcus Ranson</h3>
 								<p class="cwu-text-tiny">Leading Art & Design Director</p>
 								<a href="mailto:marcus.ranson@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
 							</div>
 							<div class="cwu-col l3 m6 w3-margin-bottom">
-								<img src="./assets/travis-ce.png" alt="Travis" style="border: 2px solid black;" width="100%"></img>
+								<img src="./assets/images/travis-ce.png" alt="Travis" style="border: 2px solid black;" width="100%"></img>
 								<h3 class="cwu-text-medium">Travis King</h3>
 								<p class="cwu-text-tiny">Website Development CE</p>
 								<a href="mailto:travis.king@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></p>
@@ -119,7 +134,7 @@
 				<!-- Gallery Section -->
 				<div class="w3-container w3-white" id="gallery">
 					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Our Gallery</b></h1>
-					<a class="cwu-button w3-bar-item cwu-text-small" href="#"><span>Explore Deeper</span></a>
+					<a class="cwu-button w3-bar-item cwu-text-small" href="gallery.html"><span>Explore Deeper</span></a>
 				</div>
 				<!-- Apply Section -->
 				<div class="w3-container w3-white" id="apply">
@@ -131,7 +146,7 @@
 						<p class="cwu-text-small">Download the form below to apply today.</p>
 						<div>
 							<!-- Downloadable Doc Here -->
-							<a href="./assets/register-form.docx" download><img src="./assets/word-logo.png" width="100vw" alt="Registration Form"></img></a>
+							<a href="./assets/register-form.docx" download><img src="./assets/images/word-logo.png" width="100vw" alt="Registration Form"></img></a>
 						</div>
 					</div>
 				</div>
@@ -145,8 +160,7 @@
 						<div class="w3-row-padding w3-padding-32">
 							<div class="cwu-col l3 m6">
 								<h2 class="cwu-text-medium"><b class="w3-margin-right">@</b>Email</h2>
-								<p class="cwu-text-small">design@hotbeans.com</p>
-								
+								<a href="mailto:design@hotbeans.com"><b class="cwu-text-small" style="display:inline-block;padding-bottom:2vw;">design@hotbeans.com</b></a>
 								<p class="cwu-text-micro">Or contact one of our members direct</p>
 								<p class="cwu-text-micro">for more personal enquires.</p>
 							</div>
@@ -185,7 +199,7 @@
 			<i class="fa fa-twitter w3-hover-opacity"></i>
 			<a href="https://github.com/TheOnePath" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
 			<a href="https://www.facebook.com/ethan.smithcoss.3?ref=bookmarks" target="_blank"><i class="fa fa-facebook w3-hover-opacity"></i></a>
-			<p class="cwu-text-tiny">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a> and <a href="./assets/cogswork.css" target="_blank">Cogswork.CSS</a>, Backend by <a href="https://pages.github.com" target="_blank">Github Pages</a>, Design by Ethan Smith-Coss</p>
+			<p class="cwu-text-tiny">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a> and <a href="./assets/styles/cogswork.css" target="_blank">Cogswork.CSS</a>, Backend by <a href="https://pages.github.com" target="_blank">Github Pages</a>, Design by Ethan Smith-Coss</p>
 			<p class="cwu-text-micro">&copy Cogswork Utility, 2019</p>
 		</footer>
 	</body>
