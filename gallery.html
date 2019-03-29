@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gallery</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Verdana'>
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Georgia'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="./assets/styles/w3.css">
+		<link rel="stylesheet" href="./assets/styles/cogswork.css">
+		<style>
+			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif;}
+			h1, footer {font-family: "Georgia", serif;}
+			hr {
+				color:#000;
+			}
+			html, body{
+				width:100%;
+				height:100%;
+			}
+			footer {
+				width:100%;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $("a").on('click', function(event) {
+				if (this.hash !== "") {
+				  event.preventDefault();
+				  var hash = this.hash;
+				  
+				  $('html, body').animate({
+					scrollTop: $(hash).offset().top
+				  }, 1200, function(){
+			 
+					window.location.hash = hash;
+				  });
+				}
+			  });
+			});
+		</script>
+	</head>
+	<body>
+		<!-- Page Footer -->
+		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-tiny">
+			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
+				<a href="#top"><i class="fa fa-arrow-up cwu-text-medium"></i></a>
+			</div>
+			<div>
+				<p>Find Us On Social Media.</p>
+				<i class="fa fa-twitter w3-hover-opacity"></i>
+				<a href="https://github.com/TheOnePath" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+				<a href="https://www.facebook.com/ethan.smithcoss.3?ref=bookmarks" target="_blank"><i class="fa fa-facebook w3-hover-opacity"></i></a>
+				<p class="cwu-text-micro">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a> and <a href="./assets/styles/cogswork.css" target="_blank">Cogswork.CSS</a>, Backend by <a href="https://pages.github.com" target="_blank">Github Pages</a>, Design by Ethan Smith-Coss</p>
+				<p class="cwu-text-nano">&copy Cogswork Utility, 2019</p>
+			</div>
+		</footer>
+	</body>
+</html>
