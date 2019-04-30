@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./assets/styles/w3.css">
 		<link rel="stylesheet" href="./assets/styles/cogswork.css">
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 		<style>
 			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif;}
 			h1, footer {font-family: "Georgia", serif;}
@@ -48,11 +49,11 @@
 			  });
 			});
 		</script>
-		<script>
+		<!--<script>
 			function aboutUs(file){
 				var rawFile = new XMLHttpRequest();
 				rawFile.open("GET", file, false);
-				rawFile.onreadystatechange = function(){
+				rawFile.onreadystatechange = function (){
 					if(rawFile.readyState === 4){
 						if(rawFile.status === 200 || rawFile.status == 0){
 							document.getElementById('aboutUs').innerHTML(rawFile.responseText);
@@ -62,7 +63,7 @@
 				}
 				rawFile.send(null);
 			}
-		</script>
+		</script>-->
 		<script>
 			var width = $(window).width();
 			$(window).on("resize", function(){
@@ -72,10 +73,10 @@
 			});
 		</script>
 	</head>
-	<body>
+	<body onload="aboutUs('file:///C:/Users/Ethan/Documents/GitHub/computingclassb.github.io/assets/text/about-us.txt')">
 		<!-- The Menubar -->
 		<div class="w3-top" id="bar">
-			<div class="w3-bar w3-white" id="menubar">
+			<div class="w3-bar w3-card-4" style="background-color: rgba(238,238,238, 0.9)" id="menubar">
 				<a href="#"><p class="cwu-text-tiny w3-margin-left" style="float:left;"><b>Hot Beans</b></p></a>
 				<div class="w3-right w3-margin-right">
 					<a class="cwu-button cwu-bar-item" href="#about"><span>About</span></a>
@@ -87,99 +88,99 @@
 		</div>
 		<!-- Make Logo Parallax Against Page Container -->
 		<div class="parallax" id="parallax"></div>
-		<!-- Page Container -->
-		<div class="w3-center w3-content" id="main" style="max-width:4096px;">
-			<!-- The Grid -->
-			<div class="cwu-animate-up">
+			<!-- Page Container -->
+			<div class="w3-center w3-content" id="main" style="max-width:4096px;">
 				<!-- The Main Page -->
-				<div class="w3-container w3-white">
+				<div class="w3-container cwu-animate-up w3-white">
 					<!-- <hr class="cwu-hr w3-black"> -->
 					<h1 class="cwu-text-title">Hot Beans</h1>
 					<p class="cwu-text-medium">This is the main webpage for Hot Beans' new website!</p>
 					<p class="cwu-text-small">looking for employment soon.</p>
-				</div>
-				<!-- About Section -->
-				<div class="w3-container w3-white" id="about">
-					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>About Us<b></h1>
-					<div>
-						<div style="padding-right:2vw;padding-left:2vw;">
-							<h2 class="cwu-text-small"><b>Hot Beans</b> is a website design company that aspire to tailor a website to your unique taste based
-							in Warwick, Warwickshire. Founded in 2019, we are a small team of 3 members currently developing front-end
-							websites for our clients, from portfolios for those who are self-employed to large companies looking for a revamp in their
-							site.</h2>
-							<p class="cwu-text-small" id="aboutUs" onload="aboutUs(url'./assets/text/about-us.txt')"><p>
-						</div>
-						<div class="w3-row-padding w3-padding-32">
-							<div class="cwu-col l3 m6 w3-margin-bottom">
-								<img src="./assets/images/ethan-dev.png" alt="Ethan" style="border: 2px solid black;" width="100%"></img>
-								<h3 class="cwu-text-medium">Ethan Smith-Coss</h3>
-								<p class="cwu-text-tiny">Leading Programming Director</p>
-								<a href="mailto:ethan.smith-coss@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
-							</div>
-							<div class="cwu-col l3 m6 w3-margin-bottom">
-								<img src="./assets/images/marcus-des.png" alt="Marcus" style="border: 2px solid black;" width="100%"></img>
-								<h3 class="cwu-text-medium">Marcus Ranson</h3>
-								<p class="cwu-text-tiny">Leading Art & Design Director</p>
-								<a href="mailto:marcus.ranson@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
-							</div>
-							<div class="cwu-col l3 m6 w3-margin-bottom">
-								<img src="./assets/images/travis-ce.png" alt="Travis" style="border: 2px solid black;" width="100%"></img>
-								<h3 class="cwu-text-medium">Travis King</h3>
-								<p class="cwu-text-tiny">Website Development CE</p>
-								<a href="mailto:travis.king@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Gallery Section -->
-				<div class="w3-container w3-white" id="gallery">
-					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Our Gallery</b></h1>
-					<a class="cwu-button w3-bar-item cwu-text-small" href="gallery.html"><span>Explore Deeper</span></a>
-				</div>
-				<!-- Apply Section -->
-				<div class="w3-container w3-white" id="apply">
-					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Apply To Our Business</b></h1>
-					<div>
-						<p class="cwu-text-medium">We are looking for new website designers to join our small team and make</p>
-						<p class="cwu-text-medium">our customers satisified with what we deliver to them</p>
-						<hr class="cwu-quarter cwu-hr">
-						<p class="cwu-text-small">Download the form below to apply today.</p>
+					<!-- About Section -->
+					<div class="w3-container w3-white" id="about">
+						<h1 class="w3-padding-48 cwu-text-xxlarge"><b>About Us<b></h1>
 						<div>
-							<!-- Downloadable Doc Here -->
-							<a href="./assets/register-form.docx" download><img src="./assets/images/word-logo.png" width="100vw" alt="Registration Form"></img></a>
+							<div style="padding-right:2vw;padding-left:2vw;">
+								<h2 class="cwu-text-small"><b>Hot Beans</b> is a website design company that aspire to tailor a website to your unique taste based
+								in Warwick, Warwickshire. Founded in 2019, we are a small team of 3 members currently developing front-end
+								websites for our clients, from portfolios for those who are self-employed to large companies looking for a revamp in their
+								site.</h2>
+								<p class="cwu-text-small" id="aboutUs"><p>
+							</div>
+							<div class="w3-row-padding w3-padding-32">
+								<div class="cwu-col l3 m6 w3-margin-bottom">
+									<img src="./assets/images/ethan-dev.jpg" alt="Ethan" style="border: 2px solid black;" width="100%"></img>
+									<h3 class="cwu-text-medium">Ethan Smith-Coss</h3>
+									<p class="cwu-text-tiny">Leading Programming Director</p>
+									<a href="mailto:ethan.smith-coss@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
+								</div>
+								<div class="cwu-col l3 m6 w3-margin-bottom">
+									<img src="./assets/images/marcus-des.jpg" alt="Marcus" style="border: 2px solid black;" width="100%"></img>
+									<h3 class="cwu-text-medium">Marcus Ranson</h3>
+									<p class="cwu-text-tiny">Leading Art & Design Director</p>
+									<a href="mailto:marcus.ranson@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></a>
+								</div>
+								<div class="cwu-col l3 m6 w3-margin-bottom">
+									<img src="./assets/images/travis-ce.jpg" alt="Travis" style="border: 2px solid black;" width="100%"></img>
+									<h3 class="cwu-text-medium">Travis King</h3>
+									<p class="cwu-text-tiny">Website Development CE</p>
+									<a href="mailto:travis.king@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></p>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- Contact Section -->
-				<div class="w3-container w3-white" id="contact">
-					<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge" style="text-align:top;"><b>Contact Us<b></h1>
-					<div>
+					<!-- Gallery Section -->
+					<div class="w3-container w3-white" id="gallery">
+						<h1 class="w3-padding-48 cwu-text-xxlarge"><b>Our Gallery</b></h1>
+						<a class="cwu-button w3-bar-item cwu-text-small" href="gallery.html"><span>Explore Deeper</span></a>
+					</div>
+					<!-- Apply Section -->
+					<div class="w3-container w3-white" id="apply">
+						<h1 class="w3-padding-32 w3-margin-top cwu-text-xxlarge"><b>Apply To Our Business</b></h1>
 						<div>
-							<p class="cwu-text-medium">Ways of contacting us if you require some personal assistance or have any enquiries.</p>
+							<p class="cwu-text-medium">We are looking for new website designers to join our small team and make</p>
+							<p class="cwu-text-medium">our customers satisified with what we deliver to them</p>
+							<hr class="cwu-quarter cwu-hr">
+							<p class="cwu-text-small">Download the form below to apply today.</p>
+							<div>
+								<!-- Downloadable Doc Here -->
+								<a href="./assets/register-form.docx" download><img src="./assets/images/word-logo.png" width="100vw" alt="Registration Form"></img></a>
+							</div>
+							<br>
+							<p class="cwu-text-medium">Or apply online</p><br>
+							<a class="cwu-button cwu-text-medium" href="apply.html"><span>Let's Go</span></a>
 						</div>
-						<div class="w3-row-padding w3-padding-32">
-							<div class="cwu-col l3 m6">
-								<h2 class="cwu-text-medium"><b class="w3-margin-right">@</b>Email</h2>
-								<a href="mailto:design@hotbeans.com"><b class="cwu-text-small" style="display:inline-block;padding-bottom:2vw;">design@hotbeans.com</b></a>
-								<p class="cwu-text-micro">Or contact one of our members direct</p>
-								<p class="cwu-text-micro">for more personal enquires.</p>
+					</div>
+					<!-- Contact Section -->
+					<div class="w3-container w3-white" id="contact">
+						<h1 class="w3-padding-48 cwu-text-xxlarge"><b>Contact Us<b></h1>
+						<div>
+							<div>
+								<p class="cwu-text-small">Ways of contacting us if you require some personal assistance or have any enquiries.</p>
 							</div>
-							<div class="cwu-col l3 m6">
-								<h2 class="cwu-text-medium"><i class="fa fa-phone w3-margin-right w3-text-black"></i>Call Us</h2>
-								<p class="cwu-text-tiny">Tel. 01926 123456</p>
-								<p class="cwu-text-tiny">Or Freephone On</p>
-								<p class="cwu-text-tiny">0800 123456</p>
-							</div>
-							<div class="cwu-col l3 m6" style="text-align:left;">
-								<h2 class="cwu-text-medium"><i class="fa fa-envelope-o w3-margin-right w3-text-black"></i>Post</h2>
-								<p class="cwu-text-tiny">115 Coventry Rd, Guys Cliffe</p>
-								<p class="cwu-text-tiny">Warwick, Warwickshire</p>
-								<p class="cwu-text-tiny">CV34 5AB</p>
+							<div class="w3-row-padding w3-padding-32">
+								<div class="cwu-col l3 m6">
+									<h2 class="cwu-text-medium"><b class="w3-margin-right">@</b>Email</h2>
+									<a href="mailto:design@hotbeans.com"><b class="cwu-text-small" style="display:inline-block;padding-bottom:2vw;">design@hotbeans.com</b></a>
+									<p class="cwu-text-micro">Or contact one of our members direct</p>
+									<p class="cwu-text-micro">for more personal enquires.</p>
+								</div>
+								<div class="cwu-col l3 m6">
+									<h2 class="cwu-text-medium"><i class="fa fa-phone w3-margin-right w3-text-black"></i>Call Us</h2>
+									<p class="cwu-text-tiny">Tel. 01926 123456</p>
+									<p class="cwu-text-tiny">Or Freephone On</p>
+									<p class="cwu-text-tiny">0800 123456</p>
+								</div>
+								<div class="cwu-col l3 m6" style="text-align:left;">
+									<h2 class="cwu-text-medium"><i class="fa fa-envelope-o w3-margin-right w3-text-black"></i>Post</h2>
+									<p class="cwu-text-tiny">115 Coventry Rd, Guys Cliffe</p>
+									<p class="cwu-text-tiny">Warwick, Warwickshire</p>
+									<p class="cwu-text-tiny">CV34 5AB</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			<!-- End Grid -->
 			</div>
 		<!-- End Container -->
 		</div>
@@ -191,7 +192,7 @@
 			document.getElementById("parallax").style.backgroundPosition = "center ".concat(div_height).toString().concat("px");
 			document.getElementById("parallax").style.height = arith.toString().concat("vw");
 		</script>
-		<footer class="w3-container w3-gray w3-animate-bottom w3-center cwu-text-small">
+		<footer class="w3-container w3-animate-bottom w3-center cwu-text-small w3-card-4" style="background-color:#EEE">
 			<div class="w3-right w3-padding-32 w3-margin-right w3-hover-opacity">
 				<a href="#top"><i class="fa fa-arrow-up cwu-text-large"></i></a>
 			</div>
