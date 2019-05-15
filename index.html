@@ -5,17 +5,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Verdana'>
-		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Georgia'>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./assets/styles/w3.css">
 		<link rel="stylesheet" href="./assets/styles/cogswork.css">
-		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
 		<style>
-			html,body,h2,h4,h5,h6 {font-family: "Verdana", sans-serif;}
-			h1, footer {font-family: "Georgia", serif;}
-			hr {
-				color:#000;
-			}
+			html,body,h1,h2,h4,h5,h6 {font-family: "Verdana", sans-serif; font-weight: 400px;}
 			html, body{
 				width:100%;
 				height:100%;
@@ -49,21 +44,6 @@
 			  });
 			});
 		</script>
-		<!--<script>
-			function aboutUs(file){
-				var rawFile = new XMLHttpRequest();
-				rawFile.open("GET", file, false);
-				rawFile.onreadystatechange = function (){
-					if(rawFile.readyState === 4){
-						if(rawFile.status === 200 || rawFile.status == 0){
-							document.getElementById('aboutUs').innerHTML(rawFile.responseText);
-							alert("Working!");
-						}
-					}
-				}
-				rawFile.send(null);
-			}
-		</script>-->
 		<script>
 			var width = $(window).width();
 			$(window).on("resize", function(){
@@ -73,7 +53,7 @@
 			});
 		</script>
 	</head>
-	<body onload="aboutUs('file:///C:/Users/Ethan/Documents/GitHub/computingclassb.github.io/assets/text/about-us.txt')">
+	<body>
 		<!-- The Menubar -->
 		<div class="w3-top" id="bar">
 			<div class="w3-bar w3-card-4" style="background-color: rgba(238,238,238, 0.9)" id="menubar">
@@ -93,9 +73,9 @@
 				<!-- The Main Page -->
 				<div class="w3-container cwu-animate-up w3-white">
 					<!-- <hr class="cwu-hr w3-black"> -->
-					<h1 class="cwu-text-title">Hot Beans</h1>
-					<p class="cwu-text-medium">This is the main webpage for Hot Beans' new website!</p>
-					<p class="cwu-text-small">looking for employment soon.</p>
+					<h1 class="cwu-text-title"><b>Hot Beans</b></h1>
+					<p class="cwu-text-medium">We Design Your Site Tailored To You</p>
+					<p class="cwu-text-medium">As It Says On The Tin.</p>
 					<!-- About Section -->
 					<div class="w3-container w3-white" id="about">
 						<h1 class="w3-padding-48 cwu-text-xxlarge"><b>About Us<b></h1>
@@ -124,7 +104,7 @@
 									<img src="./assets/images/travis-ce.jpg" alt="Travis" style="border: 2px solid black;" width="100%"></img>
 									<h3 class="cwu-text-medium">Travis King</h3>
 									<p class="cwu-text-tiny">Website Development CE</p>
-									<a href="mailto:travis.king@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></p>
+									<a href="mailto:travis.king@hotbeans.com?subject=Direct Enquiry"><button class="cwu-button" href="#"><span>Contact</span></button></p></a>
 								</div>
 							</div>
 						</div>
@@ -161,9 +141,10 @@
 							<div class="w3-row-padding w3-padding-32">
 								<div class="cwu-col l3 m6">
 									<h2 class="cwu-text-medium"><b class="w3-margin-right">@</b>Email</h2>
-									<a href="mailto:design@hotbeans.com"><b class="cwu-text-small" style="display:inline-block;padding-bottom:2vw;">design@hotbeans.com</b></a>
-									<p class="cwu-text-micro">Or contact one of our members direct</p>
-									<p class="cwu-text-micro">for more personal enquires.</p>
+									<a href="mailto:design@hotbeans.com" class="cwu-text-tiny" style="text-decoration: none;"><p><b>design@hotbeans.com</b></p></a>
+									<p class="cwu-text-tiny">Or contact one of our members</p>
+									<p class="cwu-text-tiny">direct for more personal enquires.</p>
+									<!-- style="display:inline-block;padding-bottom:0.8vw;"-->
 								</div>
 								<div class="cwu-col l3 m6">
 									<h2 class="cwu-text-medium"><i class="fa fa-phone w3-margin-right w3-text-black"></i>Call Us</h2>
@@ -184,6 +165,7 @@
 			</div>
 		<!-- End Container -->
 		</div>
+		<!-- Resize Logo -->
 		<script>
 			var div_height = document.getElementById("bar").offsetHeight;
 			var img_height = ($(window).outerHeight() * 0.15);
